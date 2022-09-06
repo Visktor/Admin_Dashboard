@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "side head head"
+        "side main main";
+    grid-template-columns: 20vw 60vw 20vw;
+    grid-template-rows: 20vh 80vh;
+}
+
+header {
+    background: linear-gradient(to right, black, purple);
+    grid-area: head;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 40px;
+}
+
+.search-bar {
+    width: 50%;
+    background-color: yellow;
+    display: flex;
+    gap: 5px;
+    height: 100%;
+}
+
+.myProfile {
+    width: 30%;
+    height: 100%;
+    background-color: brown;
+}
+
+.search {
+    height: 20px;
+    width: 250px;
+}
+
+.search-icon {
+    height: 24px;
+}
+
+.bell {
+    height: 20px;
+}
+
+
+aside {
+    background: steelblue;
+    grid-area: side;
+}
+
+main {
+    background-color: blue;
+    grid-area: main;
+}
