@@ -32,12 +32,6 @@ header {
     height: 100%;
 }
 
-.myProfile {
-    width: 30%;
-    height: 100%;
-    background-color: brown;
-}
-
 .search {
     height: 20px;
     width: 250px;
@@ -47,8 +41,26 @@ header {
     height: 24px;
 }
 
+.myProfile {
+    display: flex;
+    gap: 10px;
+    width: 30%;
+    height: 100%;
+    background-color: brown;
+}
+
+.pp_miniature{
+    height: 40px;
+    border-radius: 50%;
+}
+
 .bell {
     height: 20px;
+}
+
+.username{
+    color:white;
+    align-self:center;
 }
 
 
