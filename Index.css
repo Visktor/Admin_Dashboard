@@ -8,9 +8,10 @@ body {
     grid-template-areas:
         /* general page layout */
         "side head head"
+        "side head head"
         "side main main";
     grid-template-columns: 20vw 60vw 20vw;
-    grid-template-rows: min-content auto;
+    grid-template-rows: 10vh min-content auto;
     min-height: 100vh;
 }
 
@@ -128,7 +129,24 @@ ul p{
 aside {
     background: steelblue;
     grid-area: side;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    column-gap: 40px;
 }
+
+.sidebar-icon:nth-child(1){
+    width: 80px;
+}
+
+.sidebar-icon{
+    width: 30px;
+    justify-self:end;
+}
+
+.sidebar-option{
+    justify-self: start;
+}
+
 
 main {
     background-color: blue;
