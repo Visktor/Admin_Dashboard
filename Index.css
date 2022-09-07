@@ -7,11 +7,10 @@ body {
     display: grid;
     grid-template-areas:
         /* general page layout */
-        "side head head"
-        "side head head"
-        "side main main";
-    grid-template-columns: 20vw 60vw 20vw;
-    grid-template-rows: 10vh min-content auto;
+        "side head"
+        "side main";
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr;
     min-height: 100vh;
 }
 
@@ -114,13 +113,13 @@ header {
     justify-content: center;
     align-items: center;
     list-style: none;
-    background:url(./Icons-Images/PATINHA.svg) no-repeat;
-    width:80px;
+    background: url(./Icons-Images/PATINHA.svg) no-repeat;
+    width: 80px;
     height: 80px;
     font-size: 0.8rem;
 }
 
-ul p{
+ul p {
     position: relative;
     top: 5px;
     font-weight: bold;
@@ -130,21 +129,36 @@ aside {
     background: steelblue;
     grid-area: side;
     display: grid;
+    align-content: flex-start;
+    gap: 20px;
+    padding: 30px;
+}
+
+.option-div {
+    display: grid;
     grid-template-columns: 30% 70%;
-    column-gap: 40px;
+    gap: 20px;
 }
 
-.sidebar-icon:nth-child(1){
-    width: 80px;
+.option-div:nth-child(1) .sidebar-icon {
+    width: 90px;
 }
 
-.sidebar-icon{
+.option-div:nth-child(1) .sidebar-option {
+    align-self: center;
+}
+
+.sidebar-icon {
     width: 30px;
-    justify-self:end;
+    justify-self: center;
 }
 
-.sidebar-option{
+.sidebar-option {
     justify-self: start;
+}
+
+.option-div:nth-last-child(3){
+    margin-top: 40px;
 }
 
 
