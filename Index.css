@@ -1,6 +1,11 @@
+:root{
+    overflow-x: hidden;
+}
+
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,7 +16,7 @@ body {
         "side main";
     grid-template-columns: min-content 1fr;
     grid-template-rows: min-content 1fr;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 header {
@@ -178,15 +183,18 @@ main {
     background-color: yellow;
 }
 
-.projects {
+.projects-sec{
+    box-sizing: border-box;
     grid-area:project;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:0.25fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-.projects div{
+.projects-div {
+    display: grid;
+}
+
+.projects-div div{
     border: 2px solid black;
 }
 
