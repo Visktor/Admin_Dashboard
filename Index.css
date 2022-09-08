@@ -176,6 +176,7 @@ main {
         "project announce"
         "project trend"
     ;
+    padding: 20px;
 }
 
 .projects-sec {
@@ -203,7 +204,8 @@ main {
 .announcements {
     grid-area: announce;
     background-color: yellow;
-    padding: 20px;
+    padding: 5px;
+    border-radius: 15px;
 }
 
 .announcements div{
@@ -221,6 +223,15 @@ main {
 .trending {
     grid-area: trend;
     background-color: green;
+    padding: 20px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
 }
 
+.trending img{
+    aspect-ratio: 1;
+    width: 50px;
+    border-radius: 50%;
+}
 
