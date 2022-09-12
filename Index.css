@@ -1,5 +1,9 @@
 :root {
     overflow-x: hidden;
+    --ORANGE: #ff7b06;
+    --LIGHT-BROWN: #b3876c;
+    --BEIGE: #fff6eb;
+    --LIGHT-GREY: #dfe0df;
 }
 
 * {
@@ -20,7 +24,7 @@ body {
 }
 
 header {
-    background: linear-gradient(to right, black, purple);
+    background: var(--ORANGE);
     grid-area: head;
     display: grid;
 }
@@ -28,13 +32,11 @@ header {
 .topbar {
     display: flex;
     justify-content: space-between;
-    background-color: white;
     height: 50px;
 }
 
 .search-div {
     width: 50%;
-    background-color: yellow;
     display: flex;
     gap: 5px;
     height: 100%;
@@ -55,7 +57,6 @@ header {
     gap: 10px;
     width: 30%;
     height: 100%;
-    background-color: brown;
     justify-content: flex-end;
     padding-right: 10px;
 }
@@ -87,7 +88,6 @@ header {
 .profile {
     display: flex;
     gap: 5px;
-    background-color: red;
 
 }
 
@@ -101,7 +101,6 @@ header {
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    background-color: violet;
     width: 60%;
 }
 
@@ -131,7 +130,7 @@ ul a {
 }
 
 aside {
-    background: steelblue;
+    background-color: var(--BEIGE);
     grid-area: side;
     display: grid;
     align-content: flex-start;
@@ -141,12 +140,17 @@ aside {
 
 .option-div {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 1fr 3fr;
     gap: 20px;
 }
 
+.option-div:nth-child(1){
+    position: relative;
+    right: 18px;
+}
+
 .option-div:nth-child(1) .sidebar-icon {
-    width: 90px;
+    width: 50px;
 }
 
 .option-div:nth-child(1) .sidebar-option {
@@ -168,8 +172,8 @@ aside {
 
 main {
     display: grid;
-    background-color: blue;
-    grid-template-columns: 2fr 1fr;
+    background-color: var(--LIGHT-GREY);
+    grid-template-columns: 2fr 0.8fr;
     grid-template-rows: 1fr 1fr;
     gap: 5px;
     grid-template-areas:
@@ -195,7 +199,7 @@ main {
 }
 
 .projects-div div {
-    background-color: white;
+    background-color: var(--ORANGE);
     border-left: 15px solid greenyellow;
     border-radius: 5px;
     padding: 20px;
@@ -204,8 +208,8 @@ main {
 
 .announcements {
     grid-area: announce;
-    background-color: yellow;
-    padding: 5px;
+    background-color: var(--BEIGE);
+    padding: 40px;
     border-radius: 15px;
 }
 
@@ -223,11 +227,15 @@ main {
 
 .trending {
     grid-area: trend;
-    background-color: green;
+    background-color: var(--BEIGE);
     padding: 20px;
     border-radius: 15px;
     display: grid;
     grid-template-columns: 1fr 5fr;
+}
+
+.trending p {
+    color: black;
 }
 
 .trending img {
