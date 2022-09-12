@@ -11,6 +11,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
@@ -28,6 +29,7 @@ header {
     background: var(--ORANGE);
     grid-area: head;
     display: grid;
+    padding: 5px;
 }
 
 .topbar {
@@ -176,7 +178,6 @@ main {
     background-color: var(--LIGHT-GREY);
     gap: 30px;
     padding: 20px;
-
 }
 
 .projects-sec {
@@ -211,7 +212,7 @@ main {
 .announcements {
     grid-area: announce;
     background-color: var(--GREEN);
-    padding: 40px;
+    padding: 10px;
     border-radius: 15px;
 }
 
