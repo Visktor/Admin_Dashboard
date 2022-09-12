@@ -4,6 +4,7 @@
     --LIGHT-BROWN: #b3876c;
     --BEIGE: #fff6eb;
     --LIGHT-GREY: #dfe0df;
+    --GREEN: #00c598;
 }
 
 * {
@@ -144,7 +145,7 @@ aside {
     gap: 20px;
 }
 
-.option-div:nth-child(1){
+.option-div:nth-child(1) {
     position: relative;
     right: 18px;
 }
@@ -171,27 +172,21 @@ aside {
 }
 
 main {
-    display: grid;
+    display: flex;
     background-color: var(--LIGHT-GREY);
-    grid-template-columns: 2fr 0.8fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 5px;
-    grid-template-areas:
-        "project announce"
-        "project trend"
-    ;
+    gap: 30px;
     padding: 20px;
+
 }
 
 .projects-sec {
-    grid-area: project;
+    width: 70%;
     display: flex;
     flex-direction: column;
 }
 
 .projects-div {
     height: 100%;
-    padding: 20px;
     display: grid;
     grid-template-columns: repeat(2, minmax(400px, 1fr));
     grid-auto-rows: min-content;
@@ -199,16 +194,23 @@ main {
 }
 
 .projects-div div {
-    background-color: var(--ORANGE);
-    border-left: 15px solid greenyellow;
+    background-color: var(--BEIGE);
+    border-left: 15px solid var(--GREEN);
     border-radius: 5px;
     padding: 20px;
     font-size: max(0.95vw, 0.8rem);
 }
 
+.right-side-section{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 20px;
+}
+
 .announcements {
     grid-area: announce;
-    background-color: var(--BEIGE);
+    background-color: var(--GREEN);
     padding: 40px;
     border-radius: 15px;
 }
@@ -227,11 +229,12 @@ main {
 
 .trending {
     grid-area: trend;
-    background-color: var(--BEIGE);
+    background-color: var(--GREEN);
     padding: 20px;
     border-radius: 15px;
     display: grid;
     grid-template-columns: 1fr 5fr;
+    gap: 20px;
 }
 
 .trending p {
