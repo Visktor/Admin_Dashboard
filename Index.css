@@ -1,17 +1,17 @@
 :root {
-    overflow-x: hidden;
-    --COLOR1: #ff7b06; /* ORANGE */
      --COLOR2: #b3876c; /* LIGHT-BROWN */
+    --COLOR1: #ff7b06; /* ORANGE */
     --COLOR3: #fff6eb; /* BEIGE */
     --COLOR4: #dfe0df; /* LIGHT-GREY */
     --COLOR5: #00c598; /* LIME-GREEN */
+    overflow-x: hidden;
 }
 
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -26,23 +26,23 @@ body {
 
 header {
     background: var(--COLOR1);
-    grid-area: head;
     display: grid;
+    grid-area: head;
     padding: 5px;
 }
 
 .topbar {
     display: flex;
-    justify-content: space-between;
     height: 50px;
+    justify-content: space-between;
 }
 
 .search-div {
-    width: 50%;
+    align-items: center;
     display: flex;
     gap: 5px;
     height: 100%;
-    align-items: center;
+    width: 50%;
 }
 
 .search {
@@ -57,29 +57,29 @@ header {
 .myProfile {
     display: flex;
     gap: 10px;
-    width: 30%;
     height: 100%;
     justify-content: flex-end;
     padding-right: 10px;
+    width: 30%;
 }
 
 .pp_miniature {
-    height: 40px;
-    border-radius: 50%;
     align-self: center;
+    border-radius: 50%;
+    height: 40px;
 }
 
 .bell {
     height: 20px;
+    left: 3px;
     position: relative;
     top: 5px;
-    left: 3px;
 }
 
 .username,
 .greeting {
-    color: white;
     align-self: center;
+    color: white;
 }
 
 .bottombar {
@@ -90,53 +90,52 @@ header {
 .profile {
     display: flex;
     gap: 5px;
-
 }
 
 .profile_pic_big {
-    height: 100px;
     border-radius: 50%;
+    height: 100px;
 }
 
 .commands {
-    display: flex;
-    justify-content: space-around;
     align-items: center;
+    display: flex;
     height: 100%;
+    justify-content: space-around;
     width: 60%;
 }
 
 .commands ul {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
     align-items: flex-end;
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .commands li {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    list-style: none;
     background: url(./Icons-Images/PATINHA.svg) no-repeat;
-    width: 80px;
-    height: 80px;
+    display: flex;
     font-size: 0.8rem;
+    height: 80px;
+    justify-content: center;
+    list-style: none;
+    width: 80px;
 }
 
 ul a {
+    font-weight: bold;
     position: relative;
     top: 5px;
-    font-weight: bold;
 }
 
 aside {
-    background-color: var(--COLOR3);
-    grid-area: side;
-    display: grid;
     align-content: flex-start;
+    background-color: var(--COLOR3);
+    display: grid;
     gap: 20px;
+    grid-area: side;
     padding: 30px;
 }
 
@@ -160,8 +159,8 @@ aside {
 }
 
 .sidebar-icon {
-    width: 30px;
     justify-self: center;
+    width: 30px;
 }
 
 .sidebar-option {
@@ -173,32 +172,32 @@ aside {
 }
 
 main {
-    display: flex;
     background-color: var(--COLOR4);
+    display: flex;
     gap: 30px;
     padding: 20px;
 }
 
 .projects-sec {
-    width: 70%;
     display: flex;
     flex-direction: column;
+    width: 70%;
 }
 
 .projects-div {
-    height: 100%;
     display: grid;
-    grid-template-columns: repeat(2, minmax(400px, 1fr));
-    grid-auto-rows: min-content;
     gap: 20px;
+    grid-auto-rows: min-content;
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
+    height: 100%;
 }
 
 .projects-div div {
     background-color: var(--COLOR3);
     border-left: 15px solid var(--COLOR5);
     border-radius: 5px;
-    padding: 20px;
     font-size: max(0.95vw, 0.8rem);
+    padding: 20px;
 }
 
 .right-side-section {
@@ -209,10 +208,10 @@ main {
 }
 
 .announcements {
-    grid-area: announce;
     background-color: var(--COLOR5);
-    padding: 10px;
     border-radius: 15px;
+    grid-area: announce;
+    padding: 10px;
 }
 
 .announcements div {
@@ -228,13 +227,13 @@ main {
 }
 
 .trending {
-    grid-area: trend;
     background-color: var(--COLOR5);
-    padding: 20px;
     border-radius: 15px;
     display: grid;
-    grid-template-columns: 1fr 5fr;
     gap: 20px;
+    grid-area: trend;
+    grid-template-columns: 1fr 5fr;
+    padding: 20px;
 }
 
 .trending p {
@@ -243,8 +242,8 @@ main {
 
 .trending img {
     aspect-ratio: 1;
-    width: 50px;
     border-radius: 50%;
+    width: 50px;
 }
 
 @media only screen and (max-width:1440px) {
