@@ -1,10 +1,10 @@
 :root {
     overflow-x: hidden;
-    --ORANGE: #ff7b06;
-    --LIGHT-BROWN: #b3876c;
-    --BEIGE: #fff6eb;
-    --LIGHT-GREY: #dfe0df;
-    --GREEN: #00c598;
+    --COLOR1: #ff7b06; /* ORANGE */
+     --COLOR2: #b3876c; /* LIGHT-BROWN */
+    --COLOR3: #fff6eb; /* BEIGE */
+    --COLOR4: #dfe0df; /* LIGHT-GREY */
+    --COLOR5: #00c598; /* LIME-GREEN */
 }
 
 * {
@@ -17,7 +17,6 @@
 body {
     display: grid;
     grid-template-areas:
-        /* general page layout */
         "side head"
         "side main";
     grid-template-columns: min-content 1fr;
@@ -26,7 +25,7 @@ body {
 }
 
 header {
-    background: var(--ORANGE);
+    background: var(--COLOR1);
     grid-area: head;
     display: grid;
     padding: 5px;
@@ -133,7 +132,7 @@ ul a {
 }
 
 aside {
-    background-color: var(--BEIGE);
+    background-color: var(--COLOR3);
     grid-area: side;
     display: grid;
     align-content: flex-start;
@@ -175,7 +174,7 @@ aside {
 
 main {
     display: flex;
-    background-color: var(--LIGHT-GREY);
+    background-color: var(--COLOR4);
     gap: 30px;
     padding: 20px;
 }
@@ -195,14 +194,14 @@ main {
 }
 
 .projects-div div {
-    background-color: var(--BEIGE);
-    border-left: 15px solid var(--GREEN);
+    background-color: var(--COLOR3);
+    border-left: 15px solid var(--COLOR5);
     border-radius: 5px;
     padding: 20px;
     font-size: max(0.95vw, 0.8rem);
 }
 
-.right-side-section{
+.right-side-section {
     display: flex;
     flex-direction: column;
     width: 30%;
@@ -211,7 +210,7 @@ main {
 
 .announcements {
     grid-area: announce;
-    background-color: var(--GREEN);
+    background-color: var(--COLOR5);
     padding: 10px;
     border-radius: 15px;
 }
@@ -230,7 +229,7 @@ main {
 
 .trending {
     grid-area: trend;
-    background-color: var(--GREEN);
+    background-color: var(--COLOR5);
     padding: 20px;
     border-radius: 15px;
     display: grid;
